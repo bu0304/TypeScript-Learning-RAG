@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    // Node 直接跑 .ts，不產出 JS —— tsc 在這個專案只負責型別檢查
+    "noEmit": true,
+
+    // Node 官方建議的 type stripping 組合
+    "target": "esnext",
+    "module": "nodenext",
+    "rewriteRelativeImportExtensions": true,
+    "erasableSyntaxOnly": true,
+    "verbatimModuleSyntax": true,
+
+    "strict": true,
+    "skipLibCheck": true,
+    "lib": ["esnext"],
+    "types": ["node"]
+  },
+  "include": ["src/**/*.ts"]
+}

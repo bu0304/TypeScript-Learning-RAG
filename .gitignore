@@ -1,0 +1,8 @@
+node_modules/
+.env
+*.local
+
+# 語料與索引產物一律不進版控
+data/
+index.json
+.cache/
