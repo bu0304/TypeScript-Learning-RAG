@@ -30,6 +30,13 @@ async function main() {
   console.log(`avg size = ${totalSize / totalChunks.length}`)
   console.log(`maxSize = ${maxSize}`)
   console.log(`minSize = ${minSize}`)
+
+  // 檢查有沒有重複 id
+  const chunkIdSet = new Set<string>();
+  totalChunks.forEach(c=> {
+    if (chunkIdSet.has(c.id)) console.log(`repeated id = ${c.id}`);
+    chunkIdSet.add(c.id)
+  })
 }
 
 main();
