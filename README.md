@@ -2,20 +2,32 @@
 
 手刻一個最小 RAG，目的是理解每個環節，不是做產品。刻意不用 LangChain / LlamaIndex。
 
-## 語料
+## 語料庫
 
-React Native 官方文件（公開）。抓取方式：
+React Native 官方文件（公開，文件部分 CC BY 4.0，程式碼 MIT）。抓取方式：
 
 ```bash
 mkdir -p data
 git clone --depth 1 --filter=blob:none --sparse \
-  https://github.com/facebook/react-native-website.git data/react-native-website
-git -C data/react-native-website sparse-checkout set docs
+  https://github.com/facebook/react-native-website.git data/_tmp
+git -C data/_tmp sparse-checkout set docs
+mv data/_tmp/docs data/docs && rm -rf data/_tmp
 ```
 
-`data/` 整個在 `.gitignore` 裡 —— 語料、索引、eval 一律不進版控。
+語料庫根目錄是 `data/docs`。`data/` 整個在 `.gitignore` 裡 ——
+不是因為機密（RN 文件本來就公開），而是它是第三方內容 + 會反覆重建的索引產物，
+不該混進自己的 diff。可重現性由上面這段指令保證。
 
-規模：203 篇（扣掉 `_` 開頭的片段）、約 444k tokens、1852 個 `##` heading。
+規模（遞迴計算，含所有檔案）：
+
+| | |
+|---|---|
+| `.md` + `.mdx` | 237（其中 13 個 `_` 開頭的 partial） |
+| 子目錄 | `legacy/` 8 檔、`the-new-architecture/` 15 檔 |
+| 約 token 數 | ~551k |
+| `##` heading | 2043 |
+
+要不要納入 partial 與子目錄是你的設計決定，所以上面是全量數字。
 
 ## 環境
 
