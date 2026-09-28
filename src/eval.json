@@ -1,0 +1,170 @@
+[
+  {
+    "q": "What is Hermes?",
+    "expect": [
+      "docs/hermes.md"
+    ],
+    "lang": "en",
+    "type": "direct"
+  },
+  {
+    "q": "How can I check whether Hermes is in use?",
+    "expect": [
+      "docs/hermes.md## Confirming Hermes is in use"
+    ],
+    "lang": "en",
+    "type": "direct"
+  },
+  {
+    "q": "What is Pressable?",
+    "expect": [
+      "docs/pressable.md"
+    ],
+    "lang": "en",
+    "type": "direct"
+  },
+  {
+    "q": "Can you explain how Pressable works?",
+    "expect": [
+      "docs/pressable.md## How it works"
+    ],
+    "lang": "en",
+    "type": "direct"
+  },
+  {
+    "q": "How can I dismiss keyboard?",
+    "expect": [
+      "docs/keyboard.md# Reference## Methods### `dismiss()`"
+    ],
+    "lang": "en",
+    "type": "direct"
+  },
+  {
+    "q": "How can I add a listener to keyboard?",
+    "expect": [
+      "docs/keyboard.md# Reference## Methods### `addListener()`"
+    ],
+    "lang": "en",
+    "type": "direct"
+  },
+  {
+    "q": "How can I render a boolean input?",
+    "expect": [
+      "docs/switch.md"
+    ],
+    "lang": "en",
+    "type": "direct"
+  },
+  {
+    "q": "Does switch component have onValueChange props?",
+    "expect": [
+      "docs/switch.md# Reference## Props### `onValueChange`"
+    ],
+    "lang": "en",
+    "type": "direct"
+  },
+  {
+    "q": "How can I get platform info on user's phone?",
+    "expect": [
+      "docs/platform.md## Example"
+    ],
+    "lang": "en",
+    "type": "paraphrase"
+  },
+  {
+    "q": "What are the possible values in Platform.OS",
+    "expect": [
+      "docs/platform.md# Reference## Properties### `OS`"
+    ],
+    "lang": "en",
+    "type": "paraphrase"
+  },
+  {
+    "q": "Show RN Version",
+    "expect": [
+      "docs/reactnativeversion.md"
+    ],
+    "lang": "en",
+    "type": "paraphrase"
+  },
+  {
+    "q": "RN Version Example",
+    "expect": [
+      "docs/reactnativeversion.md## Example"
+    ],
+    "lang": "en",
+    "type": "paraphrase"
+  },
+  {
+    "q": "Define Styles",
+    "expect": [
+      "docs/style.md"
+    ],
+    "lang": "en",
+    "type": "paraphrase"
+  },
+  {
+    "q": "horizontal scroll view",
+    "expect": [
+      "docs/scrollview.md# Reference## Props### `horizontal`"
+    ],
+    "lang": "en",
+    "type": "paraphrase"
+  },
+  {
+    "q": "change text size",
+    "expect": [
+      "docs/text.md## Limited Style Inheritance"
+    ],
+    "lang": "en",
+    "type": "paraphrase"
+  },
+  {
+    "q": "one line text",
+    "expect": [
+      "docs/text.md# Reference## Props### `numberOfLines`"
+    ],
+    "lang": "en",
+    "type": "paraphrase"
+  },
+  {
+    "q": "scroll view vs flat list",
+    "expect": [
+      "docs/scrollview.md",
+      "docs/flatlist.md"
+    ],
+    "lang": "en",
+    "type": "multi"
+  },
+  {
+    "q": "How do I detect the OS version on Android and iOS?",
+    "expect": [
+      "docs/platform-specific-code.md## Platform module### Detecting the Android version <div className=\"label android\">Android</div>",
+      "docs/platform-specific-code.md## Platform module### Detecting the iOS version <div className=\"label ios\">iOS</div>"
+    ],
+    "lang": "en",
+    "type": "multi"
+  },
+  {
+    "q": "How do I write different code for iOS and Android?",
+    "expect": [
+      "docs/platform-specific-code.md## Platform module",
+      "docs/platform-specific-code.md## Platform-specific extensions"
+    ],
+    "lang": "en",
+    "type": "multi"
+  },
+  {
+    "q": "How do I run my app on an Android device?",
+    "expect": [
+      "docs/running-on-device.md## Running your app on Android devices",
+      "docs/running-on-device.md## Running your app on Android devices#### Development OS",
+      "docs/running-on-device.md## Running your app on Android devices### 1. Enable Debugging over USB",
+      "docs/running-on-device.md## Running your app on Android devices### 2. Plug in your device via USB",
+      "docs/running-on-device.md## Running your app on Android devices### 3. Run your app"
+
+    ],
+    "lang": "en",
+    "type": "multi"
+  }
+]
